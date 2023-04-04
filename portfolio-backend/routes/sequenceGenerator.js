@@ -39,16 +39,6 @@ SequenceGenerator.prototype.nextId = function(collectionType) {
       updateObject = {maxTestimonialId: maxTestimonialId};
       nextId = maxTestimonialId;
       break;
-    case 'classes':
-      maxYearId++;
-      updateObject = {maxYearId: maxYearId};
-      nextId = maxYearId;
-      break;
-    // case 'contacts':
-    //   maxContactId++;
-    //   updateObject = {maxContactId: maxContactId};
-    //   nextId = maxContactId;
-    //   break;
     default:
       return -1;
   }

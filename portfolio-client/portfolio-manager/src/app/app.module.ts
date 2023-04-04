@@ -16,12 +16,6 @@ import { TestimonialListComponent } from './testimonials/testimonial-list/testim
 import { TestimonialItemComponent } from './testimonials/testimonial-item/testimonial-item.component';
 import { TestimonialEditComponent } from './testimonials/testimonial-edit/testimonial-edit.component';
 import { TestimonialDetailComponent } from './testimonials/testimonial-detail/testimonial-detail.component';
-import { ClassesComponent } from './classes/classes.component';
-import { YearEditComponent } from './classes/year-edit/year-edit.component';
-import { YearListComponent } from './classes/year-list/year-list.component';
-import { YearDetailComponent } from './classes/year-detail/year-detail.component';
-import { YearItemComponent } from './classes/year-item/year-item.component';
-import { ClassItemInputComponent } from './classes/year-edit/class-item-input/class-item-input.component';
 
 
 @NgModule({
@@ -37,13 +31,7 @@ import { ClassItemInputComponent } from './classes/year-edit/class-item-input/cl
     TestimonialListComponent,
     TestimonialItemComponent,
     TestimonialEditComponent,
-    TestimonialDetailComponent,
-    ClassesComponent,
-    YearEditComponent,
-    YearListComponent,
-    YearDetailComponent,
-    YearItemComponent,
-    ClassItemInputComponent,
+    TestimonialDetailComponent
   ],
   imports: [
     BrowserModule,

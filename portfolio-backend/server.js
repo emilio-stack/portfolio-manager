@@ -12,7 +12,6 @@ var mongoose = require('mongoose');
 var index = require('./routes/app');
 const projectRoutes = require('./routes/projects')
 const testimonialRoutes = require('./routes/testimonials')
-const classesRoutes = require('./routes/classes')
 
 // establish a connection to the mongo database
 mongoose.connect('mongodb+srv://cms:NAt6vjyTq4C88NUK@cluster0.nebvmwg.mongodb.net/portfolio',
@@ -59,7 +58,6 @@ app.use(express.static(path.join(__dirname, 'dist/portfolio-manager')));
 app.use('/', index);  
 app.use('/projects', projectRoutes); 
 app.use('/testimonials', testimonialRoutes);
-app.use('/classes', classesRoutes);
 
 // Tell express to map all other non-defined routes back to the index page
 app.get('*', (req, res) => {
