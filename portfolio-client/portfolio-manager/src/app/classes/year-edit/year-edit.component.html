@@ -1,0 +1,60 @@
+<div class="panel panel-default">
+    <div class="panel-body">
+  
+      <form id="year-edit" (ngSubmit)="onSubmit(f)" #f="ngForm">
+        <div class="row">
+          <div class="col-sm-12 form-group">
+            <label for="term">Term Year:</label>
+            <input
+              type="text"
+              id="term"
+              class="form-control"
+              size="120"
+              max="120"
+              name="term"
+              [ngModel]="term?.year"
+              required
+              #year="ngModel">
+          </div>
+        </div>
+  
+        <label for="term">Classes:</label>
+        <div class="row"
+        *ngFor="let classElement of term?.classes; index as i">
+          <div class="col-sm-12 form-group">
+            <!-- <label>{{classElement}}</label> -->
+            <!-- <manager-class-item-input
+            *ngFor="let classElement of classes; index as i"
+            [class]="classElement"
+            [index]="i">
+            </manager-class-item-input> -->
+            <input
+            type="text"
+            id="class{{i}}"
+            class="form-control"
+            size="120"
+            max="255"
+            name="class{{i}}"
+            [ngModel]="term?.classes[i]"
+            >
+          </div>
+        </div>
+  
+        <!-- <div class="alert alert-danger"
+        *ngIf="!year.valid && year.touched && editedClasses.length === 0"
+        ><p>Year and at least one class are required!</p></div> -->
+  
+        <div class="row">
+          <div class="col-xs-12 btn-toolbar">
+            <button class="btn btn-success" type="submit" [disabled]="!f.valid">Save</button>
+            <button class="btn btn-primary" type="button" (click)="onCancel()">Cancel</button>
+            <button class="btn btn-success" type="button" (click)="onNewClass()">New Class</button>
+          </div>
+        </div>
+  
+      </form>
+  
+    </div>
+  </div>
+  
+  

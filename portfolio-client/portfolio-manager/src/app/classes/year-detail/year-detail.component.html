@@ -1,0 +1,28 @@
+<div class="panel panel-default col-lg-push-12" xmlns="http://www.w3.org/1999/html">
+    <div class="panel-heading">
+      <div class="row pad-all">
+        <h4 class="title margin-left-right">{{year.year}}</h4>
+        <div class="row pull-right margin-left-right">
+          <a routerLink="./edit" class="btn btn-info" >Edit</a>
+          <a (click)="onDelete()" class="btn btn-danger">Delete</a>
+        </div>
+      </div>
+    </div>
+    <div class="panel-body">
+      <div class="pad-left-right">
+        <div class="row">
+            <label>Year:</label>
+            <span class="label-value"> {{ year.year }} </span>
+        </div>
+        <br>
+        <div class="row">
+            <label>Classes:</label> 
+            <ul>
+                <li *ngFor="let class of year.classes">
+                    <span class="label-value"> {{ class }} </span>
+                </li>
+            </ul>
+        </div>
+      </div>
+    </div>
+</div>

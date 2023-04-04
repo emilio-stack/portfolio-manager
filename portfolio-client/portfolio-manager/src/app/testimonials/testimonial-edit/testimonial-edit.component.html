@@ -1,0 +1,83 @@
+<div class="panel panel-default">
+    <div class="panel-body">
+  
+      <form id="testimonial-edit" (ngSubmit)="onSubmit(f)" #f="ngForm">
+        <div class="row">
+          <div class="col-sm-12 form-group">
+            <label for="person">Testimonial Person:</label>
+            <input
+              type="text"
+              id="person"
+              class="form-control"
+              size="120"
+              max="120"
+              name="person"
+              [ngModel]="testimonial?.person"
+              required
+              #person="ngModel">
+          </div>
+        </div>
+  
+        <div class="row">
+          <div class="col-sm-12 form-group">
+            <label for="quality">Testimonial Quality:</label>
+            <input
+              type="text"
+              id="quality"
+              class="form-control"
+              size="120"
+              max="255"
+              name="quality"
+              [ngModel]="testimonial?.quality"
+              required
+              #quality="ngModel">
+          </div>
+        </div>
+  
+        <div class="row">
+          <div class="col-sm-12 form-group">
+            <label for="text">Testimonial Text:</label>
+            <input
+              type="text"
+              id="text"
+              class="form-control"
+              size="150"
+              max="255"
+              name="text"
+              [ngModel]="testimonial?.text"
+              required
+              #text="ngModel">
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-sm-12 form-group">
+            <label for="credentials">Testimonial Credentials:</label>
+            <input
+              type="text"
+              id="credentials"
+              class="form-control"
+              size="150"
+              max="255"
+              name="credentials"
+              [ngModel]="testimonial?.credentials">
+          </div>
+        </div>
+  
+        <div class="alert alert-danger"
+        *ngIf="!person.valid && person.touched || !text.valid && text.touched || !quality.valid && quality.touched"
+        ><p>Testimonial Person, Text, and Quality are required</p></div>
+  
+        <div class="row">
+          <div class="col-xs-12 btn-toolbar">
+            <button class="btn btn-success" type="submit" [disabled]="!f.valid">Save</button>
+            <button class="btn btn-primary" type="button" (click)="onCancel()">Cancel</button>
+          </div>
+        </div>
+  
+      </form>
+  
+    </div>
+  </div>
+  
+  

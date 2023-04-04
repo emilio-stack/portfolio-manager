@@ -1,0 +1,16 @@
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <div class="row pad-left-right">
+            <span class="pull-left title">Testimonials</span>
+            <a routerLink="./new" class="btn btn-success pull-right">Add Testimonial</a>
+        </div>
+    </div>
+    <div class="panel-body">
+        <div class="center-panel">
+            <manager-testimonial-item
+            *ngFor="let testimonialElement of testimonials"
+            [testimonial]="testimonialElement"></manager-testimonial-item>
+        </div>
+    </div>
+</div>
+  

@@ -1,0 +1,16 @@
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <div class="row pad-left-right">
+            <span class="pull-left title">Projects</span>
+            <a routerLink="./new" class="btn btn-success pull-right">Add Project</a>
+        </div>
+    </div>
+    <div class="panel-body">
+        <div class="center-panel">
+            <manager-project-item
+            *ngFor="let projectElement of projects"
+            [project]="projectElement"></manager-project-item>
+        </div>
+    </div>
+</div>
+  

@@ -1,0 +1,34 @@
+<div class="panel panel-default col-lg-push-12" xmlns="http://www.w3.org/1999/html">
+    <div class="panel-heading">
+      <div class="row pad-all">
+        <h4 class="title margin-left-right">{{testimonial.person}}</h4>
+        <div class="row pull-right margin-left-right">
+          <a routerLink="./edit" class="btn btn-info" >Edit</a>
+          <a (click)="onDelete()" class="btn btn-danger">Delete</a>
+        </div>
+      </div>
+    </div>
+    <div class="panel-body">
+      <div class="pad-left-right">
+        <div class="row">
+            <label>Person:</label>
+            <span class="label-value"> {{ testimonial.person }} </span>
+        </div>
+        <br>
+        <div class="row">
+            <label>Text:</label> 
+            <span class="label-value"> {{ testimonial.text }} </span>
+        </div>
+        <br>
+        <div class="row">
+            <label>Quality:</label>
+            <span class="label-value"> {{ testimonial.quality }} </span>
+        </div>
+        <br>
+        <div class="row">
+            <label>Credentials:</label>
+            <span class="label-value"> {{ testimonial.credentials }} </span>
+        </div>
+      </div>
+    </div>
+</div>
